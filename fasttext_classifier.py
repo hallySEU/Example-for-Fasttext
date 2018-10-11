@@ -42,7 +42,8 @@ class FasttextClassifier(object):
         print >> sys.stderr, 'Start training model, training file: %s, saved model path: %s.' \
                              % (traing_file, save_path)
 
-        classifier = fasttext.supervised(traing_file, save_path, label_prefix='__label__')
+        classifier = fasttext.supervised(traing_file, save_path, label_prefix='__label__', 
+                                         dim=100, word_ngrams=2, bucket=2000000, loss='softmax')
 
         end_time = time.time()
         print >> sys.stderr, 'Training over. cost %.2fs' % (end_time - start_time)
