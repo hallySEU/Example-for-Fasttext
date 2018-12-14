@@ -22,7 +22,7 @@ class Config(object):
 
         self.predict_file = 'data/news_fasttext_predict.txt'
 
-        self.save_model = 'model/news_model'
+        self.save_model = 'news_model'
 
 
 if __name__ == '__main__':
